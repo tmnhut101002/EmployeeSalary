@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,15 +141,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="DailyEmployee.h" />
-    <ClInclude Include="Employee.h" />
+    <ClInclude Include="EmployeeFactory.h" />
+    <ClInclude Include="IEmployee.h" />
     <ClInclude Include="HourlyEmployee.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="ProductEmployee.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DailyEmployee.cpp" />
-    <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="EmployeeFactory.cpp" />
+    <ClCompile Include="IEmployee.cpp" />
     <ClCompile Include="HourlyEmployee.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="ProductEmployee.cpp" />
   </ItemGroup>
