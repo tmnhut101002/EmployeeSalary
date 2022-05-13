@@ -6,7 +6,7 @@
 class Manager: public IEmployee
 {
 private:
-	int _numEmployee;
+	int _numEmployee; 
 public:
 	// Constructor & destructor
 	Manager() {};
