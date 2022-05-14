@@ -20,5 +20,7 @@ public:
 	int calSalary();
 
 	string toString();
+	IEmployee* generate(string);
+	string className() { return "ProductEmployee"; }
 };
 

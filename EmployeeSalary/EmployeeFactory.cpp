@@ -1,6 +1,6 @@
 #include "EmployeeFactory.h"
 int EmployeeFactory::supportedTypeCount() {
-	return prototypes.size();
+	return _prototypes.size();
 }
 
 EmployeeFactory* EmployeeFactory::instance() {

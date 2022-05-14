@@ -13,18 +13,23 @@ class EmployeeFactory
 {
 private:
 	static inline EmployeeFactory* _instance = NULL;
-	vector<IEmployee*> prototypes;
+	vector<IEmployee*> _prototypes;
 
 	EmployeeFactory() {
-		prototypes.push_back(new DailyEmployee());
-		prototypes.push_back(new HourlyEmployee());
-		prototypes.push_back(new ProductEmployee());
-		prototypes.push_back(new Manager());
+		_prototypes.push_back(new DailyEmployee());
+		_prototypes.push_back(new HourlyEmployee());
+		_prototypes.push_back(new ProductEmployee());
+		_prototypes.push_back(new Manager());
 	}
 
 public: 
 	int supportedTypeCount();
 	static EmployeeFactory* instance();
+	IEmployee* create(int type, string line) {
+
+		IEmployee* employee = _prototypes[type]->generate(line);
+		return employee;
+	}
 };
 
 class IConvertor {
@@ -58,7 +63,7 @@ public:
 
 		stringstream builder;
 
-		builder << "Hourly Employee: " << endl;
+		builder << "Hourly Employee " << endl;
 		builder << "Name: " << Dstaff->Name() << endl;
 		builder << "Total Hour: " << Dstaff->NumHour() << endl;
 		builder << "Salary: " << Dstaff->calSalary() << endl;
@@ -69,7 +74,7 @@ public:
 };
 
 
-class ProducrEmployeeIUConverter : public IConvertor {
+class ProductEmployeeIUConverter : public IConvertor {
 public:
 	string convert(void* staff) {
 		ProductEmployee* Dstaff = (ProductEmployee*)staff;

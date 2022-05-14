@@ -19,6 +19,7 @@ public:
 	void setName(string value) { _name = value; }
 public:
 	virtual string toString() = 0;
-
+	virtual IEmployee* generate(string) = 0;
+	virtual string className() = 0;
 };
 

@@ -18,7 +18,10 @@ public:
 	void setSalary(int value) { _salary = value; }
 	// function
 	int calSalary();
+	
 public:
 	string toString();
+	IEmployee* generate(string);
+	string className() { return "DailyEmployee"; }
 };
 
