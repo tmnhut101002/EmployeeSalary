@@ -16,7 +16,7 @@ public:
 	int NumEmployee() { return _numEmployee; }
 	void setNumEmployee(int value) { _numEmployee = value; }
 	int FixedSalary() { return _fixedSalary; }
-	void setSalary(int value) { _fixedSalary = value; }
+	void setFixedSalary(int value) { _fixedSalary = value; }
 	int Salary() { return _salary; }
 	void setSalary(int value) { _salary = value; }
 	// function 
