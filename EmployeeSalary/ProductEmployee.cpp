@@ -1,12 +1,9 @@
 #include "ProductEmployee.h"
-//ProductEmployee::ProductEmployee() {
-//	_name = "";
-//	_numProduct = 0;
-//}
 
-ProductEmployee::ProductEmployee(string name, int numProduct) {
+ProductEmployee::ProductEmployee(string name, int numProduct, int salary) {
 	_name = name;
 	_numProduct = numProduct;
+	_salary = salary;
 }
 
 ProductEmployee::~ProductEmployee() {
@@ -14,7 +11,7 @@ ProductEmployee::~ProductEmployee() {
 }
 
 int ProductEmployee::calSalary() {
-	return SALARY_PRODUCT * _numProduct;
+	return _salary * _numProduct;
 }
 
 string ProductEmployee::toString() {

@@ -1,18 +1,15 @@
 #include "DailyEmployee.h"
-//DailyEmployee::DailyEmployee() {
-//	_name = "";
-//	_numDay = 0;
-//}
 
-DailyEmployee::DailyEmployee(string name, int numDay) {
+DailyEmployee::DailyEmployee(string name, int numDay, int salary) {
 	_name = name;
 	_numDay = numDay;
+	_salary = salary;
 }
 DailyEmployee::~DailyEmployee() {
 	//Do nothing
 }
 int DailyEmployee::calSalary() {
-	return SALARY_DAY * _numDay;
+	return _salary * _numDay;
 }
 
 string DailyEmployee::toString() {

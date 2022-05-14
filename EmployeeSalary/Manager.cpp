@@ -1,12 +1,11 @@
 #include "Manager.h"
-//Manager::Manager() {
-//	_name = "";
-//	_numEmployee = 0;
-//}
 
-Manager::Manager(string name, int numEmployee) {
+
+Manager::Manager(string name, int numEmployee, int fixed_salary, int salary) {
 	_name = name;
 	_numEmployee = numEmployee;
+	_fixedSalary = fixed_salary;
+	_salary = salary;
 }
 
 Manager::~Manager() {
@@ -14,7 +13,7 @@ Manager::~Manager() {
 }
 
 int Manager::calSalary() {
-	return FIXED_SALARY + SALARY_EMPLOYEE * 100;
+	return _fixedSalary + _salary * 100;
 }
 
 string Manager::toString() {

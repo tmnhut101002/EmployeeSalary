@@ -1,19 +1,21 @@
 #pragma once
 #include "IEmployee.h"
 
-#define SALARY_DAY 100
 class DailyEmployee : public IEmployee
 {
 private:
 	int _numDay;
+	int _salary;
 public:
 	// Constructor & destructor
 	DailyEmployee() {};
-	DailyEmployee(string, int);
+	DailyEmployee(string, int, int);
 	~DailyEmployee();
 	// Getter & setter
 	int NumDay() { return _numDay; }
 	void setNumDay(int value) { _numDay = value; }
+	int Salary() { return _salary; }
+	void setSalary(int value) { _salary = value; }
 	// function
 	int calSalary();
 public:

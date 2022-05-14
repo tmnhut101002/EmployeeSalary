@@ -1,20 +1,16 @@
 #include "HourlyEmployee.h"
 
-//HourlyEmployee::HourlyEmployee() {
-//	_name = "";
-//	_numHour = 0;
-//}
-
-HourlyEmployee::HourlyEmployee(string name, int numHour) {
+HourlyEmployee::HourlyEmployee(string name, int numHour, int salary) {
 	_name = name;
 	_numHour = numHour;
+	_salary = salary;
 }
 HourlyEmployee::~HourlyEmployee() {
 	// Do nothing
 }
 
 int HourlyEmployee::calSalary() {
-	return SALARY_HOUR * _numHour;
+	return _salary * _numHour;
 }
 
 string HourlyEmployee::toString() {

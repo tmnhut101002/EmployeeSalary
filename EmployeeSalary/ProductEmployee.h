@@ -1,19 +1,21 @@
 #pragma once
 #include "IEmployee.h"
-#define SALARY_PRODUCT 10
 
 class ProductEmployee : public IEmployee
 {
 private:
 	int _numProduct;
+	int _salary;
 public:
 	// Constructor & destructor
 	ProductEmployee() {};
-	ProductEmployee(string, int);
+	ProductEmployee(string, int, int);
 	~ProductEmployee();
 	// Getter & setter
 	int NumProduct() { return _numProduct; }
 	void setNumProduct(int value) { _numProduct = value; }
+	int Salary() { return _salary; }
+	void setSalary(int value) { _salary = value; }
 	// function
 	int calSalary();
 
