@@ -4,6 +4,7 @@
 #include "HourlyEmployee.h"
 #include "ProductEmployee.h"
 #include "Manager.h"
+
 class DailyEmployee;
 class HourlyEmployee;
 class ProductEmployee;
@@ -21,12 +22,10 @@ private:
 		_prototypes.push_back(new ProductEmployee());
 		_prototypes.push_back(new Manager());
 	}
-
 public: 
 	int supportedTypeCount();
 	static EmployeeFactory* instance();
 	IEmployee* create(int type, string line) {
-
 		IEmployee* employee = _prototypes[type]->generate(line);
 		return employee;
 	}
@@ -36,7 +35,6 @@ class IConvertor {
 public:
 	virtual string convert(void* staff) = 0;
 };
-
 
 class DailyEmployeeIUConverter : public IConvertor {
 public:
@@ -55,7 +53,6 @@ public:
 	}
 };
 
-
 class HourlyEmployeeIUConverter : public IConvertor {
 public:
 	string convert(void* staff) {
@@ -73,7 +70,6 @@ public:
 	}
 };
 
-
 class ProductEmployeeIUConverter : public IConvertor {
 public:
 	string convert(void* staff) {
@@ -90,7 +86,6 @@ public:
 		return result;
 	}
 };
-
 
 class ManagerIUConverter : public IConvertor {
 public:

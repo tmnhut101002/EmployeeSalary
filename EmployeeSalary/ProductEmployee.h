@@ -16,9 +16,8 @@ public:
 	void setNumProduct(int value) { _numProduct = value; }
 	int Salary() { return _salary; }
 	void setSalary(int value) { _salary = value; }
-	// function 
+public:
 	int calSalary();
-
 	string toString();
 	IEmployee* generate(string);
 	string className() { return "ProductEmployee"; }

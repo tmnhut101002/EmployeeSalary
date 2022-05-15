@@ -9,8 +9,11 @@ struct {
 } state;
 
 int main() {
+
 	ifstream ifs;
-	ifs.open("November2021.txt", ios::in);
+	char filename[20] = "November2021.txt";
+	ifs.open(filename, ios::in);
+
 	if (!ifs) {
 		cout << "Cannot open this file!!!" << endl;
 		return 0;

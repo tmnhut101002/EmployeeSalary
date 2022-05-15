@@ -19,7 +19,7 @@ public:
 	void setFixedSalary(int value) { _fixedSalary = value; }
 	int Salary() { return _salary; }
 	void setSalary(int value) { _salary = value; }
-	// function 
+public:
 	int calSalary();
 	string toString();
 	IEmployee* generate(string);

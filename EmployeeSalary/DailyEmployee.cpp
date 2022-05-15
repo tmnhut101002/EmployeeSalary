@@ -5,9 +5,11 @@ DailyEmployee::DailyEmployee(string name, int numDay, int salary) {
 	_numDay = numDay;
 	_salary = salary;
 }
+
 DailyEmployee::~DailyEmployee() {
 	//Do nothing
 }
+
 int DailyEmployee::calSalary() {
 	return _salary * _numDay;
 }

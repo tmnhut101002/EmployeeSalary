@@ -1,6 +1,5 @@
 #include "Manager.h"
 
-
 Manager::Manager(string name, int numEmployee, int fixed_salary, int salary) {
 	_name = name;
 	_numEmployee = numEmployee;
@@ -27,7 +26,6 @@ string Manager::toString() {
 	string result = builder.str();
 	return result;
 }
-
 
 IEmployee* Manager::generate(string line) {
 	int idx_type = line.find(":");

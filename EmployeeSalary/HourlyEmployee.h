@@ -1,8 +1,6 @@
 #pragma once
 #include "IEmployee.h"
 
-#define SALARY_HOUR 15
-
 class HourlyEmployee: public IEmployee
 {
 private:
@@ -18,7 +16,7 @@ public:
 	void setNumHour(int value) { _numHour = value; }
 	int Salary() { return _salary; }
 	void setSalary(int value) { _salary = value; }
-	// function
+public: 
 	int calSalary();
 	string toString();
 	IEmployee* generate(string);

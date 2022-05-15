@@ -16,10 +16,8 @@ public:
 	void setNumDay(int value) { _numDay = value; }
 	int Salary() { return _salary; }
 	void setSalary(int value) { _salary = value; }
-	// function
-	int calSalary();
-	
 public:
+	int calSalary();
 	string toString();
 	IEmployee* generate(string);
 	string className() { return "DailyEmployee"; }
